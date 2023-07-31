@@ -1,0 +1,23 @@
+# ninja log v5
+11	11140	1657113850603988434	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/SigmoidFocalLoss_cuda.o	67d058556711f37f
+4	11182	1657113850643988985	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/deform_pool_kernel_cuda.o	4e357605d5489532
+6	11392	1657113850855991903	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/nms.o	3d3451bf33767469
+8	11395	1657113850859991958	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/ROIPool_cuda.o	1a74f706140c199e
+10	11603	1657113851067994821	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/ROIAlign_cuda.o	c906029d3879cf1c
+1	12152	1657113851612002310	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/deform_conv_kernel_cuda.o	7ed764ffc544ea74
+2	15775	1657113855240052255	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cpu/nms_cpu.o	9d22577c4be22632
+0	16407	1657113855872060957	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cpu/ROIAlign_cpu.o	17af58f23a2176cd
+0	19913	1657113859372109151	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/vision.o	cef6ec7405659ac
+2	9449	1657114112663617434	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/deform_pool_cuda.o	387d4125a011a7ca
+2	9994	1657114113207625005	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/deform_conv_cuda.o	94c5256cd7cc22d4
+9	10391	1657114125311793513	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/deform_conv_cuda.o	cc2da204a1e6d2d1
+11	10659	1657114125583797300	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/ROIPool_cuda.o	c4e58db4373f3044
+6	10668	1657114125587797356	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/deform_pool_cuda.o	3b0b28280d55719
+13	10749	1657114125671798526	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/SigmoidFocalLoss_cuda.o	34de91345e6678fe
+9	11203	1657114126119804764	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/nms.o	98e844962dc4ad2b
+13	11251	1657114126171805489	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/ROIAlign_cuda.o	f786084440100978
+8	11543	1657114126459809499	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/deform_pool_kernel_cuda.o	495c6648c907f86c
+5	11950	1657114126867815180	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cuda/deform_conv_kernel_cuda.o	c18d3e049456c2cf
+4	15801	1657114130723868878	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cpu/ROIAlign_cpu.o	bdbe5d8159bfec80
+6	17620	1657114132539894170	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/cpu/nms_cpu.o	c5ff49b2f2a2b1f9
+4	22261	1657114137175958742	/data3/yczhang/code/DCNet/build/temp.linux-x86_64-3.6/data3/yczhang/code/DCNet/maskrcnn_benchmark/csrc/vision.o	32d4ec2927b7cffc

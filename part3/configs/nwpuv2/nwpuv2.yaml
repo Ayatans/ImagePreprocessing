@@ -1,0 +1,61 @@
+MODEL:
+  META_ARCHITECTURE: "GeneralizedRCNN"
+  WEIGHT: "catalog://VGGImageNetPretrained/JCJOHNS/VGG-16" #"/remote-home/yczhang/code/odwscl/output/nwpu-best/model_0002300.pth" #"catalog://ImageNetPretrained/MSRA/R-50" # #
+  BACKBONE:
+    CONV_BODY: "VGG16-OICR" #"R-50-C5" # #"R-101-C5"
+  WSOD_ON: True
+  FASTER_RCNN: False
+  ROI_HEADS:
+    SCORE_THRESH: 0.0
+    NMS: 0.4  # to be decided  0.3:60.75 best:0.39
+  ROI_BOX_HEAD:
+    NUM_CLASSES: 11
+    POOLER_METHOD: "ROIPool"
+    POOLER_RESOLUTION: 7
+    POOLER_SCALES: (0.125,) #(0.0625,) # #(0.0625,)
+    FEATURE_EXTRACTOR: "VGG16.roi_head" #"ResNet50Conv5ROIFeatureExtractor" # #"ResNet101Conv5ROIFeatureExtractor"
+  ROI_WEAK_HEAD:
+    PREDICTOR: "MISTPredictor"
+    LOSS: "RoIRegLoss"
+    OICR_P: 0.0
+    REGRESS_ON: True
+DB:
+  METHOD: 'dropblock'
+DATASETS:
+  TRAIN: ("nwpuv2_trainval",)
+  TEST: ("nwpuv2_trainval",) #("nwpuv2_test",)
+PROPOSAL_FILES:
+  TRAIN: ('proposal/SS/nwpuv2/SS-fast-nwpuv2_trainval.pkl',)  # ('proposal/SS/dior/SS-single-dior_trainval.pkl',)
+  TEST: ('proposal/SS/nwpuv2/SS-fast-nwpuv2_trainval.pkl',) #('proposal/SS/nwpuv2/SS-fast-nwpuv2_test.pkl',)
+DATALOADER:
+  SIZE_DIVISIBILITY: 32
+INPUT:
+  MIN_SIZE_TRAIN: (480, 576, 688, 864, 1000, 1200) #(400, 800, 1200) #  #(480, 576, 688, 864, 1000, 1200)
+  MAX_SIZE_TRAIN: 2000
+  MIN_SIZE_TEST: 450 #800 # for best test set #800 for best trainval set
+  MAX_SIZE_TEST: 2000
+SOLVER:
+  IMS_PER_BATCH:  48 #28
+  BASE_LR:  0.05 # #0.056 #0.0025
+  WEIGHT_DECAY: 0.0001
+  WARMUP_ITERS: 500 #1000 #200 #800 # 400 # 200
+  STEPS:   (500, 2500, 3500) #(300, 800) # #(250, 1250, 1750) # # #(3500, 5000) #(3000, 4000) #(9375, 13125)  #(4000, 5000) #  #(4000, 6000) ## (1875, 2625) #(4600, 6500) #(25000, 35000) # #(10000, 13250) #(40000,53000) #(80000, 106800)  # (20000, 26700) # 2w worse than 1w
+  MAX_ITER:  4000 #1200 # #20000 # 6000 #5000 #15000 # 3000 #6000 # #7500  #7500 #40000 # #15000 # #60000 #120000  # 30000
+  CHECKPOINT_PERIOD: 100 #1250 #2500 #10000
+  CONTRA: True
+  GAMMA: 0.5
+SOLVER_CDB:
+  BASE_LR: 0.0001
+  GAMMA: 3.0
+  WEIGHT_DECAY: 0.0001
+  STEPS: (20000, 26700)
+TEST:
+  IMS_PER_BATCH : 16
+  BBOX_AUG:
+    ENABLED: True
+    HEUR: "AVG"
+    H_FLIP: True
+    SCALES:  (480, 576, 688, 864, 1000, 1200) #best:(480, 576, 688, 864, 1000, 1200, 1440) #(400, 576, 688, 864, 1000,  1400, 1600, 1800, 2000)
+    MAX_SIZE: 2000
+    SCALE_H_FLIP: True
+SEED: 1234

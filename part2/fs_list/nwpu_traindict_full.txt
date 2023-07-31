@@ -1,0 +1,10 @@
+airplane /root/code/zyc/dataset/NWPU-VOC/nwpulist/airplane_trainval.txt
+baseballdiamond /root/code/zyc/dataset/NWPU-VOC/nwpulist/baseballdiamond_trainval.txt
+basketballcourt /root/code/zyc/dataset/NWPU-VOC/nwpulist/basketballcourt_trainval.txt
+bridge /root/code/zyc/dataset/NWPU-VOC/nwpulist/bridge_trainval.txt
+groundtrackfield /root/code/zyc/dataset/NWPU-VOC/nwpulist/groundtrackfield_trainval.txt
+harbor /root/code/zyc/dataset/NWPU-VOC/nwpulist/harbor_trainval.txt
+ship /root/code/zyc/dataset/NWPU-VOC/nwpulist/ship_trainval.txt
+storagetank /root/code/zyc/dataset/NWPU-VOC/nwpulist/storagetank_trainval.txt
+tenniscourt /root/code/zyc/dataset/NWPU-VOC/nwpulist/tenniscourt_trainval.txt
+vehicle /root/code/zyc/dataset/NWPU-VOC/nwpulist/vehicle_trainval.txt

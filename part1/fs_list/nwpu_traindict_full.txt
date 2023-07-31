@@ -1,0 +1,10 @@
+airplane /remote-home/yczhang/code/dataset/NWPU-VOC/nwpulist/airplane_trainval.txt
+baseballdiamond /remote-home/yczhang/code/dataset/NWPU-VOC/nwpulist/baseballdiamond_trainval.txt
+basketballcourt /remote-home/yczhang/code/dataset/NWPU-VOC/nwpulist/basketballcourt_trainval.txt
+bridge /remote-home/yczhang/code/dataset/NWPU-VOC/nwpulist/bridge_trainval.txt
+groundtrackfield /remote-home/yczhang/code/dataset/NWPU-VOC/nwpulist/groundtrackfield_trainval.txt
+harbor /remote-home/yczhang/code/dataset/NWPU-VOC/nwpulist/harbor_trainval.txt
+ship /remote-home/yczhang/code/dataset/NWPU-VOC/nwpulist/ship_trainval.txt
+storagetank /remote-home/yczhang/code/dataset/NWPU-VOC/nwpulist/storagetank_trainval.txt
+tenniscourt /remote-home/yczhang/code/dataset/NWPU-VOC/nwpulist/tenniscourt_trainval.txt
+vehicle /remote-home/yczhang/code/dataset/NWPU-VOC/nwpulist/vehicle_trainval.txt

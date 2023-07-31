@@ -1,0 +1,60 @@
+MODEL:
+  META_ARCHITECTURE: "GeneralizedRCNN"
+  WEIGHT: "catalog://VGGImageNetPretrained/JCJOHNS/VGG-16"
+  BACKBONE:
+    CONV_BODY: "VGG16-OICR" #"R-101-C5"
+  WSOD_ON: True
+  FASTER_RCNN: False
+  ROI_HEADS:
+    SCORE_THRESH: 0.0
+    NMS: 0.4
+  ROI_BOX_HEAD:
+    NUM_CLASSES: 11
+    POOLER_METHOD: "ROIPool"
+    POOLER_RESOLUTION: 7
+    POOLER_SCALES: (0.125,) #(0.0625,)
+    FEATURE_EXTRACTOR: "VGG16.roi_head" #"ResNet101Conv5ROIFeatureExtractor"
+  ROI_WEAK_HEAD:
+    PREDICTOR: "MISTPredictor"
+    LOSS: "RoIRegLoss"
+    OICR_P: 0.0
+    REGRESS_ON: True
+DB:
+  METHOD: 'dropblock'
+DATASETS:
+  TRAIN: ("nwpu_trainval",)
+  TEST: ("nwpu_test",)
+PROPOSAL_FILES:
+  TRAIN: ('proposal/SS/nwpu/SS-fast-nwpu_trainval.pkl',)  # ('proposal/SS/dior/SS-single-dior_trainval.pkl',)
+  TEST: ('proposal/SS/nwpu/SS-fast-nwpu_test.pkl',)
+DATALOADER:
+  SIZE_DIVISIBILITY: 32
+INPUT:
+  MIN_SIZE_TRAIN: (480, 576, 688, 864, 1000, 1200) #(400, 800, 1200) #  #(480, 576, 688, 864, 1000, 1200)
+  MAX_SIZE_TRAIN: 2000
+  MIN_SIZE_TEST: 800
+  MAX_SIZE_TEST: 2000
+SOLVER:
+  IMS_PER_BATCH: 28
+  BASE_LR: 0.04 #0.0025
+  WEIGHT_DECAY: 0.0001
+  WARMUP_ITERS:  200 #800 # 400 # 200
+  STEPS:  (4600, 6500) #(25000, 35000) # #(10000, 13250) #(40000,53000) #(80000, 106800)  # (20000, 26700) # 2w worse than 1w
+  MAX_ITER: 7500 #40000 # #15000 # #60000 #120000  # 30000
+  CHECKPOINT_PERIOD: 2500 #10000
+  CONTRA: True
+SOLVER_CDB:
+  BASE_LR: 0.0001
+  GAMMA: 3.0
+  WEIGHT_DECAY: 0.0001
+  STEPS: (20000, 26700)
+TEST:
+  IMS_PER_BATCH : 16
+  BBOX_AUG:
+    ENABLED: True
+    HEUR: "AVG"
+    H_FLIP: True
+    SCALES: (480, 576, 688, 864, 1000, 1200)
+    MAX_SIZE: 2000
+    SCALE_H_FLIP: True
+SEED: 1234
